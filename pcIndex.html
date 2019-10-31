@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap </title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.css">  
+	
+	<style>
+		.breadcrumb #test
+		{
+			float: right;
+		}
+
+        .panel.panel-default
+        {
+            border: none;
+            background-color: white;
+        }
+
+        #accordion
+        {
+            width: 300px;
+            float: right;
+            /* text-align: center; */
+        }
+
+        .input
+        {
+            border: .1rem solid rgba(226, 226, 226, 0.692);
+        }
+
+        #search
+        {
+            width: 620px;
+            margin:0 auto;
+        }
+
+        .logo
+        {
+            font-size: 6rem;
+            text-align: center;
+            color: rgb(104, 104, 104);
+        }
+
+        .con
+        {
+            width: 100%;
+        }
+
+        .inputNull
+        {
+            height: 50px;
+        }
+	</style>
+</head>
+<body>
+
+<ul class="breadcrumb">
+	<li><a href="#homepage" data-toggle="collapse" data-parent="#home">搜索</a></li>
+	<li><a href="#">资源</a></li>
+	<li><a href="#">来玩一些好玩的</a></li>
+    <li class="active">欢迎来到十二家</li>
+	<li id="test">
+		<a data-toggle="collapse" data-parent="#accordion"  href="#sign">注册</a>
+	</li>
+	<li id="test" >
+        <a data-toggle="collapse" data-parent="#home"  href="#log">登录</a>
+    </li>
+</ul>
+
+<!-- 注册登录块 -->
+
+<!-- 主页~ -->
+<div class="con">
+        <!-- <div class="inputNull"></div> -->
+
+        
+        <div class="panel-group" id="home">
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="homepage">
+                        <div style="text-align: center;">输入文字进行搜索吧</div>
+                        <div class="panel-body">
+                            <div class="input-group " id="search">
+                                <input type="text" class="form-control" id="searchkey" onkeydown = "enterSearch()">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" id="searchbutton">III</button>
+                                </span>
+                                <!-- <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                                </span> -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo">
+                    十二家
+                </div>
+        </div>
+
+        
+</div>
+
+<!-- <div class="logo">
+    十二家
+</div> -->
+<script>
+    // $(function (){
+    //     $("[data-toggle='popover']").popover();
+    // });
+
+    var but = document.getElementById('searchbutton');
+    but.onclick = function()
+    {
+        var searchkey = document.getElementById('searchkey');
+        var url = 'http://www.baidu.com/s?wd=' + searchkey.value;
+        window.open(url);
+    }
+
+    function enterSearch(){
+    var event = window.event || arguments.callee.caller.arguments[0];
+    if (event.keyCode == 13) {
+        //搜索的方法
+        var searchkey = document.getElementById('searchkey');
+        var url = 'http://www.baidu.com/s?wd=' + searchkey.value;
+        window.open(url);
+    }
+}
+    
+</script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+<script type="text/javascript" src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>
