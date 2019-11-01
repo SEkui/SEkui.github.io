@@ -4,7 +4,7 @@
 	<meta charset="utf-8"> 
 	<title>十二家</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.css">  
-    <!-- 哈哈，被你发现了 -->
+	
 	<style>
 		.breadcrumb #test
 		{
@@ -51,13 +51,25 @@
         {
             height: 50px;
         }
+
+        .searchInput
+        {
+            border-radius: 1.3rem;
+        }
+
+        .searchButton
+        {
+            border-radius: 1.3rem;
+            font-weight: bold;
+            border-color: rgba(163, 163, 163, 0.315);
+        }
 	</style>
 </head>
 <body>
 
 <ul class="breadcrumb">
 	<li><a href="#homepage" data-toggle="collapse" data-parent="#home">搜索</a></li>
-	<li><a href="#">资源</a></li>
+	<li><a href="source.html">资源</a></li>
 	<li><a href="#">来玩一些好玩的</a></li>
     <li class="active">欢迎来到十二家</li>
 	<li id="test">
@@ -81,9 +93,9 @@
                         <div style="text-align: center;">输入文字进行搜索吧</div>
                         <div class="panel-body">
                             <div class="input-group " id="search">
-                                <input type="text" class="form-control" id="searchkey" onkeydown = "enterSearch()">
+                                <input type="text" class="form-control searchInput" id="searchkey" onkeydown = "enterSearch()">
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default" id="searchbutton">III</button>
+                                    <button type="button" class="btn searchButton">III</button>
                                 </span>
                                 <!-- <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">Go!</button>
